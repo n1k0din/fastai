@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: make-lint
+        name: Запустить проверку ruff
+        entry: make
+        args: ["lint"]
+        language: system
+        pass_filenames: false
+
+      - id: make-format
+        name: Запустить форматтер ruff
+        entry: make
+        args: ["format"]
+        language: system
+        pass_filenames: false
